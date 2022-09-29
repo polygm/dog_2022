@@ -1,0 +1,26 @@
+= Wire Update library for SAMD based boards =
+
+This Arduino library implements a firmware update procedure using I2C bus on Microchip SAMD21 micro controller based devices.
+
+== Dependencies ==
+This library relies on https://github.com/arduino-libraries/WiFi101OTA[WiFi101OTA] and https://github.com/arduino/ArduinoCore-samd/tree/master/libraries/SDU[SDU] libraries.
+You get SDU for free when you download the https://github.com/arduino/ArduinoCore-samd[Arduino SAMD core] for SAMD based boards. Pleae make sure to install this core using the https://www.arduino.cc/en/Guide/Cores[Arduino boards manager].
+To install WiFi101OTA use the https://www.arduino.cc/en/Guide/Libraries#toc3[Arduino library manager] instead
+
+== License ==
+
+Copyright (c) Arturo Guadalupi. All right reserved.
+
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this library; if not, write to the Free Software
+Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
