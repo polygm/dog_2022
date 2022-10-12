@@ -52,10 +52,10 @@ uint8_t servo_fr_2 = 5;
 uint8_t servo_fr_3 = 6;
 uint8_t servo_bl_1 = 8;
 uint8_t servo_bl_2 = 9;
-uint8_t servo_bl_3 = 11;
+uint8_t servo_bl_3 = 10;
 uint8_t servo_br_1 = 12;
 uint8_t servo_br_2 = 13;
-uint8_t servo_br_3 = 15;
+uint8_t servo_br_3 = 14;
 
 void setup() {
   
@@ -107,10 +107,10 @@ void setup() {
   int pulse10;
       
   angle1 = 0;
-  pulse1 = map(angle1 - 5, 0, 180, USMIN, USMAX);
-  pulse2 = map(angle1 + 165, 0, 180, USMIN, USMAX);
-  pulse3 = map(angle1 + 175, 0, 180, USMIN, USMAX);
-  pulse4 = map(angle1, 0, 180, USMIN, USMAX);
+  pulse1 = map(angle1 -5 , 0, 180, USMIN, USMAX);
+  pulse2 = map(angle1 + 160, 0, 180, USMIN, USMAX);
+  pulse3 = map(angle1 + 160, 0, 180, USMIN, USMAX);
+  pulse4 = map(angle1 -5, 0, 180, USMIN, USMAX);
   pwm.writeMicroseconds(servo_fl_1, pulse1);
   pwm.writeMicroseconds(servo_fr_1, pulse2);
   pwm.writeMicroseconds(servo_bl_1, pulse3);
@@ -119,11 +119,11 @@ void setup() {
   angle2 = 130;
   angle3 = 90;
   angle4 = 30;
-  angle5 = 90;
+  angle5 = 70;
   angle6 = 130;
   angle7 = 90;
   angle8 = 30;
-  angle9 = 90;
+  angle9 = 70;
   
   pulse2 = map(angle2, 0, 180, USMIN, USMAX);
   pulse3 = map(angle3, 0, 180, USMIN, USMAX);
@@ -235,10 +235,10 @@ void loop() {
     
 
       angle1 = 0;
-      pulse1 = map(angle1 - 5, 0, 180, USMIN, USMAX);
-      pulse2 = map(angle1 +165, 0, 180, USMIN, USMAX);
-      pulse3 = map(angle1 +175, 0, 180, USMIN, USMAX);
-      pulse4 = map(angle1, 0, 180, USMIN, USMAX);
+      pulse1 = map(angle1 -5, 0, 180, USMIN, USMAX);
+      pulse2 = map(angle1 +160, 0, 180, USMIN, USMAX);
+      pulse3 = map(angle1 +160, 0, 180, USMIN, USMAX);
+      pulse4 = map(angle1 -5 , 0, 180, USMIN, USMAX);
       pwm.writeMicroseconds(servo_fl_1, pulse1);
       pwm.writeMicroseconds(servo_fr_1, pulse2);
       pwm.writeMicroseconds(servo_bl_1, pulse3);
@@ -251,11 +251,11 @@ void loop() {
   angle2 = 130;
   angle3 = 90;
   angle4 = 30;
-  angle5 = 90;
+  angle5 = 70;
   angle6 = 130;
   angle7 = 90;
   angle8 = 30;
-  angle9 = 90;
+  angle9 = 70;
       
       while (angle2 >= 110) {
         pulse2 = map(angle2, 0, 180, USMIN, USMAX);
@@ -354,11 +354,11 @@ void loop() {
   angle2 = 130;
   angle3 = 90;
   angle4 = 30;
-  angle5 = 90;
+  angle5 = 70;
   angle6 = 130;
   angle7 = 90;
   angle8 = 30;
-  angle9 = 90;
+  angle9 = 70;
       
       while (angle2 >= 110) {
         pulse2 = map(angle2, 0, 180, USMIN, USMAX);
@@ -460,7 +460,7 @@ void loop() {
         pulse2 = map(angle2, 0, 180, USMIN, USMAX);
         pulse3 = map(angle3, 0, 180, USMIN, USMAX);
         pulse5 = map(160 - angle2, 0, 180, USMIN, USMAX);
-        pulse6 = map(180 - angle3, 0, 180, USMIN, USMAX);
+        pulse6 = map(160 - angle3, 0, 180, USMIN, USMAX);
         pwm.writeMicroseconds(servo_fl_2, pulse2);
         pwm.writeMicroseconds(servo_fl_3, pulse3);
         pwm.writeMicroseconds(servo_fr_2, pulse5);
@@ -484,7 +484,7 @@ void loop() {
         pulse2 = map(angle2, 0, 180, USMIN, USMAX);
         pulse3 = map(angle3, 0, 180, USMIN, USMAX);
         pulse5 = map(160 - angle2, 0, 180, USMIN, USMAX);
-        pulse6 = map(180 - angle3, 0, 180, USMIN, USMAX);
+        pulse6 = map(160 - angle3, 0, 180, USMIN, USMAX);
         pwm.writeMicroseconds(servo_fl_2, pulse2);
         pwm.writeMicroseconds(servo_fl_3, pulse3);
         pwm.writeMicroseconds(servo_fr_2, pulse5);
@@ -504,7 +504,7 @@ void loop() {
       angle3 = 90;
 
       pulse5 = map(160 - angle2, 0, 180, USMIN, USMAX);
-      pulse6 = map(180 - angle3, 0, 180, USMIN, USMAX);
+      pulse6 = map(160 - angle3, 0, 180, USMIN, USMAX);
       pwm.writeMicroseconds(servo_fr_2, pulse5);
       pwm.writeMicroseconds(servo_fr_3, pulse6);
       pwm.writeMicroseconds(servo_br_2, pulse5);
@@ -549,7 +549,7 @@ void loop() {
       
       while (angle2 <= 160) {
         pulse5 = map(160 - angle2, 0, 180, USMIN, USMAX);
-        pulse6 = map(180 - angle3, 0, 180, USMIN, USMAX);       
+        pulse6 = map(160 - angle3, 0, 180, USMIN, USMAX);       
         pwm.writeMicroseconds(servo_fr_2, pulse5);
         pwm.writeMicroseconds(servo_fr_3, pulse6);
         pwm.writeMicroseconds(servo_br_2, pulse5);
@@ -563,7 +563,7 @@ void loop() {
       
       while (angle2 >= 130)  {
         pulse5 = map(160 - angle2, 0, 180, USMIN, USMAX);
-        pulse6 = map(180 - angle3, 0, 180, USMIN, USMAX);
+        pulse6 = map(160 - angle3, 0, 180, USMIN, USMAX);
         pwm.writeMicroseconds(servo_fr_2, pulse5);
         pwm.writeMicroseconds(servo_fr_3, pulse6);
         pwm.writeMicroseconds(servo_br_2, pulse5);
@@ -578,11 +578,11 @@ void loop() {
   angle2 = 130;
   angle3 = 90;
   angle4 = 30;
-  angle5 = 90;
+  angle5 = 70;
   angle6 = 130;
   angle7 = 90;
   angle8 = 30;
-  angle9 = 90;
+  angle9 = 70;
       
       pulse2 = map(angle2, 0, 180, USMIN, USMAX);
       pulse3 = map(angle3, 0, 180, USMIN, USMAX);
@@ -652,11 +652,11 @@ void loop() {
   angle2 = 130;
   angle3 = 90;
   angle4 = 30;
-  angle5 = 90;
+  angle5 = 70;
   angle6 = 130;
   angle7 = 90;
   angle8 = 30;
-  angle9 = 90;
+  angle9 = 70;
         
         pulse2 = map(angle2, 0, 180, USMIN, USMAX);
         pulse3 = map(angle3, 0, 180, USMIN, USMAX);
